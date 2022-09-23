@@ -1,0 +1,19 @@
+{
+  "data": {
+    "content": "Assignment",
+    "shape": "round_rectangle"
+  },
+  "style": {
+    "borderColor": "#1a1a1a",
+    "borderOpacity": "1.0",
+    "color": "#1a1a1a",
+    "fillColor": "#8fd14f",
+    "fillOpacity": "1.0"
+  },
+  "position": {
+    "origin": "center",
+    "x": 0,
+    "y": 0
+  }
+}
+

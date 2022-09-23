@@ -1,0 +1,16 @@
+{
+  "name":"stickerandimojis",
+  "policy":{
+    "permissionsPolicy":{
+      "collaborationToolsStartAccess":"all_editors",
+      "copyAccess":"anyone",
+      "sharingAccess":"team_members_with_editing_rights"
+    },
+    "sharingPolicy":{
+      "access":"private",
+      "inviteToAccountAndBoardLinkAccess":"no_access",
+      "organizationAccess":"private",
+      "teamAccess":"private"
+    }
+  }
+}
