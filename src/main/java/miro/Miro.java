@@ -58,8 +58,8 @@ public class Miro {
         return driver;
     }
 
-    public void createDashboard(){
-
-
+    public void refreshPage(){
+        this.getDriver().navigate().refresh();
     }
+
 }
