@@ -35,7 +35,7 @@ public class Miro {
         String expectedTitle = "Sign in | Miro | Online Whiteboard for Visual Collaboration";
         String actualTitle = "";
 
-        // launch Fire fox and direct it to the Base URL
+        // launch Chrome browser and direct it to the Base URL
         driver.get(baseUrl);
         driver.manage().window().maximize();
 
