@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class miroTests {
 
-    @Test(priority = 0)
+    @Test(priority = 0,testName ="VerifySharedBoard")
     public void verifyShareBoardBetweenTwoUsers() throws IOException, InterruptedException {
         Miro miro = new Miro();
         miro.openMiroApplication();
@@ -18,7 +18,6 @@ public class miroTests {
         miro.refreshPage();
         //Share board with user Two
         miro.board.shareBoard();
-
         miro.dashboard.openSharedBoard(boardname);
         miro.canvas.addSticker(driver);
         miro.utils.captureUserOneboardscreenshot(driver);

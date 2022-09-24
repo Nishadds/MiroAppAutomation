@@ -15,9 +15,8 @@ Steps:
 
 ### Run the project
 - Install Apache maven https://maven.apache.org/install.html
-- commands in mac simply do "brew install maven"
-- Download the source code from git hub repository: https://github.com/Nishadds/MiroAppAutomation
-- From command line go root directory of the project, ensure pom.xml file is available in the folder.
+- Download the project source code from git hub repository: https://github.com/Nishadds/MiroAppAutomation
+- From the command line go to the root directory of the project, ensure pom.xml file is available in the folder.
 - All the dependencies are added in pom.xml file, no need to add any jar files.
 - Clean and build the project, run the command:
 ```aidl
