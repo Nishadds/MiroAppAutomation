@@ -1,22 +1,20 @@
 package miro;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import java.io.IOException;
 
 public class miroTests {
     Miro miro;
     WebDriver driver;
 
-    @BeforeTest
+    @BeforeMethod
     public void openMiroApp(){
         miro = new Miro();
         miro.openMiroApplication();
         driver = miro.getDriver();
     }
 
-    @Test(testName ="VerifySharedBoard",description = "verify miro app share board between users")
+    @Test(testName ="VerifySharedBoardUsingAPItest",description = "verify miro app share board between users")
     public void verifyShareBoardBetweenTwoUsers() throws IOException, InterruptedException {
         miro.login.assertLoginPage(driver);
         miro.login.loginWithUserOne();
@@ -38,7 +36,7 @@ public class miroTests {
         miro.dashboard.verifyBoardIsSame(boardid);
     }
 
-    @Test(testName ="VerifySharedBoard",description = "verify miro app share board between users")
+    @Test(testName ="VerifySharedBoardUsingImageComparison",description = "verify miro app share board between users")
     public void verifyShareBoardBetweenTwoUsersUsingImageComparison() throws IOException, InterruptedException {
         miro.login.assertLoginPage(driver);
         miro.login.loginWithUserOne();
@@ -61,9 +59,7 @@ public class miroTests {
         miro.dashboard.openSharedBoard(boardname);
         miro.dashboard.verifyBoardIsSame(boardid);
     }
-
-
-    @AfterTest
+    @AfterMethod
     public void tearDown() throws IOException {
         driver.quit();
         miro.board.deleteBoard();
