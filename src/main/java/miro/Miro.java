@@ -1,16 +1,11 @@
 package miro;
-
-import miro.objects.*;
 import miro.pages.DashBoardPage;
 import miro.pages.LoginPage;
 import miro.API.*;
 import miro.pages.BoardPage;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-
-import java.util.Map;
 
 public class Miro {
     public LoginPage login;
@@ -33,7 +28,7 @@ public class Miro {
         driver = new ChromeDriver();
         String baseUrl = "https://miro.com/login/";
         String expectedTitle = "Sign in | Miro | Online Whiteboard for Visual Collaboration";
-        String actualTitle = "";
+        String actualTitle;
 
         // launch Chrome browser and direct it to the Base URL
         driver.get(baseUrl);

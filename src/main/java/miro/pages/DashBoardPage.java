@@ -1,12 +1,8 @@
 package miro.pages;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import java.io.IOException;
 import java.time.Duration;
 
 import static miro.objects.DashBoardObjects.*;
@@ -23,12 +19,12 @@ public class DashBoardPage {
     }
 
     //Opens board from Dash board using board name.
-    public void openSharedBoard(String boardname){
+    public void openSharedBoard(String boardname) throws InterruptedException {
         //assert login successful
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-
         wait.until(ExpectedConditions.visibilityOfElementLocated(getboardElement(boardname)));
         driver.findElement(getboardElement(boardname)).click();
+        Thread.sleep(10000);
     }
 
     public void signOut(){
@@ -47,5 +43,8 @@ public class DashBoardPage {
 
     }
 
-
+    public void verifyBoardIsSame(String boardID){
+        String url = driver.getCurrentUrl();
+        Assert.assertTrue(url.contains(boardID));
+    }
 }

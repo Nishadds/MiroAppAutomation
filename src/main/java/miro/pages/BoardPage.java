@@ -5,14 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.io.IOException;
 import java.time.Duration;
 import static miro.objects.BoardObjects.*;
 
 public class BoardPage {
 
-    public void addSticker(WebDriver driver) throws InterruptedException, IOException {
+    public void addSticker(WebDriver driver) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         wait.until(ExpectedConditions.visibilityOfElementLocated(moreToolsElement));
         driver.findElement(moreToolsElement).click();
@@ -36,7 +34,8 @@ public class BoardPage {
         WebElement canvas = driver.findElement(canvasElement);
         actions.dragAndDrop(object1, canvas);
         actions.build().perform();
-        Thread.sleep(5000);
         driver.findElement(closeStickersToolBar).click();
+        Thread.sleep(10000);
+
     }
 }

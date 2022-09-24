@@ -1,5 +1,5 @@
 {
-  "name":"stickerandimojis",
+  "name":"Board",
   "policy":{
     "permissionsPolicy":{
       "collaborationToolsStartAccess":"all_editors",
