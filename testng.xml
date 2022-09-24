@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="MiroTestSuite" verbose="1" parallel="methods" thread-count="1">
-    <test name="verifyShareBoardBetweenTwoUsers">
+<suite name="tests" allow-return-values="true" verbose="10">
+    <test name="suite">
+        <classes>
+            <class name="miro.miroTests"></class>
+        </classes>
         <packages>
             <package name="miro.*"/>
         </packages>
