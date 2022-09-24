@@ -16,9 +16,10 @@ Steps:
 ### Run the project
 - Install Apache maven https://maven.apache.org/install.html
 - Download the project source code from git hub repository: https://github.com/Nishadds/MiroAppAutomation
+- Copy Chrome web driver in drivers folder under project root. You can download the chrome driver from https://chromedriver.chromium.org/downloads
 - From the command line go to the root directory of the project, ensure pom.xml file is available in the folder.
 - All the dependencies are added in pom.xml file, no need to add any jar files.
-- Clean and build the project, run the command:
+- Run Below command to Clean and execute the project:
 ```aidl
 mvn clean test
 ```
