@@ -64,14 +64,16 @@ public class boardActions {
     public void verifyStickerImageAdded() throws IOException {
         RestAssured.baseURI="https://api.miro.com";
         String noofitems;
-        Response resp = given().
+        String resp = given().
                 header("Authorization", "Bearer " + bearerToken).header("Content-Type", "application/json").
                 when().log().all().
                 get("/v2/boards/"+boardid+"/items?limit=10").
                 then().assertThat().statusCode(200).
-                extract().response();
-        noofitems = resp.jsonPath().getString("total");
-        Assert.assertEquals(noofitems,"1");
+                extract().response().asString();
+
+        JsonPath js = new JsonPath(resp);
+        Assert.assertEquals(js.getString("total"),"1");
+        Assert.assertEquals(js.getString("data[0].type"),"image");
     }
 
     public void deleteBoard() throws IOException {
