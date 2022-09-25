@@ -25,7 +25,6 @@ public class boardActions {
             post("/v2/boards").
             then().assertThat().statusCode(201).
             extract().response();
-
     boardid = resp.jsonPath().getString("id");
     boardname = resp.jsonPath().getString("name");
     return boardname;
@@ -70,7 +69,6 @@ public class boardActions {
                 get("/v2/boards/"+boardid+"/items?limit=10").
                 then().assertThat().statusCode(200).
                 extract().response().asString();
-
         JsonPath js = new JsonPath(resp);
         Assert.assertEquals(js.getString("total"),"1");
         Assert.assertEquals(js.getString("data[0].type"),"image");
