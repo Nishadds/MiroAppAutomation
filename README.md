@@ -13,6 +13,8 @@ Steps:
 4. As a “User2” I login into service and open “Board”
 5. As a “User2” I should see created sticker on “Board”
 
+####In the script User1 is "shaikhnishad2014@outlook.com" and User2 is "nishadquality@outlook.com"
+
 ### Run the project
 - Install Apache maven https://maven.apache.org/install.html
 - Download the project source code from git hub repository: https://github.com/Nishadds/MiroAppAutomation
