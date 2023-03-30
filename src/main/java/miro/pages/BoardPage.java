@@ -11,7 +11,7 @@ import static miro.objects.BoardObjects.*;
 public class BoardPage {
 
     public void addSticker(WebDriver driver) throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(300));
         wait.until(ExpectedConditions.visibilityOfElementLocated(moreToolsElement));
         driver.findElement(moreToolsElement).click();
         WebDriverWait otherwait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -22,7 +22,7 @@ public class BoardPage {
 
         otherwait.until(ExpectedConditions.visibilityOfElementLocated(selectStickerTab));
         driver.findElement(selectStickerTab).click();
-
+        System.out.println("before inputsticker");
         otherwait.until(ExpectedConditions.visibilityOfElementLocated(inputSticker));
         driver.findElement(inputSticker).sendKeys("100");
         Thread.sleep(5000);
@@ -34,6 +34,7 @@ public class BoardPage {
         WebElement canvas = driver.findElement(canvasElement);
         actions.dragAndDrop(object1, canvas);
         actions.build().perform();
+        driver.findElement(closeStickersToolBar).click();
         driver.findElement(closeStickersToolBar).click();
         Thread.sleep(10000);
 

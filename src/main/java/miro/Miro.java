@@ -25,6 +25,7 @@ public class Miro {
     public void openMiroApplication() {
         // declaration and instantiation of objects/variables
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+        System.setProperty("webdriver.http.factory", "jdk-http-client");
         driver = new ChromeDriver();
         String baseUrl = "https://miro.com/login/";
         String expectedTitle = "Sign in | Miro | Online Whiteboard for Visual Collaboration";

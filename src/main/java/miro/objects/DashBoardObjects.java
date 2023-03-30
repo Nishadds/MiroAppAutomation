@@ -6,7 +6,7 @@ public class DashBoardObjects {
     public static final By teamNameTitle = By.xpath("//div[@data-testid='team-menu']/div/div/span");
     public static By getboardElement(String boardname) {
         //boards-grid-view/div/div//span[text()='new board5']
-        String xpath = "//boards-grid-view/div/div//span[text()='"+boardname+"']";
+        String xpath = "//div[@aria-label='Board']//span[text()='"+boardname+"']";
         return By.xpath(xpath);
     }
 
