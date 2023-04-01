@@ -8,9 +8,11 @@ public class LoginPageObjects {
 
 //    public static final By noOfBoards = By.xpath("//boards-grid-view/div/div");
 //    public static final By gotestingTeamElem = By.xpath("//div[@aria-label='Switch to Testing team']");
-    public static final String name = "shaikhnishad2014@outlook.com";
-    public static final String pwd =  "@Assignment1234";
-    public static final String seconduser = "nishadquality@outlook.com";
+//    public static final String name = "shaikhnishad2014@outlook.com";
+//    public static final String pwd =  "@Assignment1234";
+    public static final String name = "javeeduserone@gmail.com";
+    public static final String pwd =  "@1234abc";
+    public static final String seconduser = "javeedmainuser@gmail.com";
 
 
 

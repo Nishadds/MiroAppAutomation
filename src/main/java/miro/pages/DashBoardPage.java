@@ -15,7 +15,7 @@ public class DashBoardPage {
         driver = _driver;
         String teamName = driver.findElement(teamNameTitle).getText();
         //validating team should be Testing Team.
-        Assert.assertEquals(teamName,"Testing team");
+        Assert.assertEquals(teamName,"ShareBtwUsers team");
     }
 
     //Opens board from Dash board using board name.

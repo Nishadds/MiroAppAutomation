@@ -21,7 +21,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.4.0</version>
+            <version>4.8.1</version>
         </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
@@ -66,6 +66,15 @@
             <artifactId>selenium-http-jdk-client</artifactId>
             <version>4.8.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.netty/netty-common -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-common</artifactId>
+            <version>4.1.90.Final</version>
+        </dependency>
+
+
+
     </dependencies>
     <build>
         <plugins>

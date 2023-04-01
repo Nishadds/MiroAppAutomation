@@ -24,7 +24,7 @@ public class BoardPage {
         driver.findElement(selectStickerTab).click();
         System.out.println("before inputsticker");
         otherwait.until(ExpectedConditions.visibilityOfElementLocated(inputSticker));
-        driver.findElement(inputSticker).sendKeys("100");
+        driver.findElement(inputSticker).sendKeys("correct");
         Thread.sleep(5000);
         otherwait.until(ExpectedConditions.visibilityOfElementLocated(firstSticker));
         driver.findElement(firstSticker).click();

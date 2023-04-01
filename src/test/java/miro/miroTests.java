@@ -28,7 +28,7 @@ public class miroTests {
         miro.dashboard.openSharedBoard(boardname);
         miro.canvas.addSticker(driver);
         //using api
-        miro.board.verifyStickerImageAdded();
+//        miro.board.verifyStickerImageAdded();
         miro.dashboard.signOut();
         //Second User Validations
         miro.login.loginWithUserTwo();

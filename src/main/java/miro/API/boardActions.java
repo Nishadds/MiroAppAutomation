@@ -13,7 +13,8 @@ import org.json.simple.JSONArray;
 import org.testng.Assert;
 
 public class boardActions {
-    public String bearerToken="eyJtaXJvLm9yaWdpbiI6ImV1MDEifQ_ZZAMlTP-daKrntBWxBv6uVfLPws";
+//    public String bearerToken="eyJtaXJvLm9yaWdpbiI6ImV1MDEifQ_ZZAMlTP-daKrntBWxBv6uVfLPws";
+    public String bearerToken="eyJtaXJvLm9yaWdpbiI6ImV1MDEifQ_kPv1baKbGktlHN6y-WUUzSx2LLQ";
     private String boardid;
     String boardname;
     public String createBoard() throws IOException {
